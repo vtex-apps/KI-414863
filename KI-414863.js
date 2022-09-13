@@ -5,10 +5,20 @@ $(document).ready(function () {
       const removeUnavailableItems = document.querySelector(
         "#remove-unavailable-items"
       );
+
+      const buttonCartRemoveUnavailableItems = document.querySelector(
+        "#checkedEmpty"
+      );
+
       if (document.contains(removeUnavailableItems)) {
         if (!listenerCreated) {
           listenerCreated = true;
           createListener(listenerCreated, removeUnavailableItems);
+        }
+      } else if (document.contains(buttonCartRemoveUnavailableItems)) {
+        if (!listenerCreated) {
+          listenerCreated = true;
+          createListener(listenerCreated, buttonCartRemoveUnavailableItems);
         }
       } else {
         listenerCreated = false;
